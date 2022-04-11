@@ -1,0 +1,423 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.contenedorcontacto{
+    width:100%;
+}
+.contendorproductosresponsive{
+    width:100%;
+}
+
+header{
+    
+  /*  background-color:#BBBBBB;*/
+  background-color:#CCCCCC;
+    padding:20px 0;
+}
+/*li porque es la parte del nav que se va a modificar en html*/
+ 
+
+.caja{
+    width:80%;
+    position:relative;
+    margin:0 auto;
+}
+
+nav{
+    position:absolute; /*quiere decir que sera relativo a lo que yo le marque*/
+    top:110px;
+    right:0;
+}
+nav li{
+display:inline;
+margin:0 0 0 15px;
+}
+
+nav a{
+    text-transform:uppercase;
+    color:#000000;
+    font-weight:bold;
+    font-size:22px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#c78c19;
+    text-decoration:underline;
+}
+
+
+/*usamos una tecnica en .productos*/
+
+.productos{
+    align-items:center;
+   /* width:984px;*/
+   width:80%;
+  
+    margin:0 automatico;
+    padding:30px;
+     
+}
+
+.productos li{
+   
+    display:inline-block;
+    
+    text-align:center;
+    width:30%;
+    /*que se alinien vertical en la parte superior */
+    vertical-align:top;
+    /*ponemos un background para ver los elementos pocisiones y tamaño y corregir*/
+   /* background-color:#CCCCCC;*/
+    margin:0 1.5%;
+    padding:30px 20px;
+    /*tamaño de la caja esto es el borde de los limites del
+     elemento sera el limite del tamaño de caja osea no mas del 30% inicado*/
+   box-sizing:border-box;
+   
+  /* border-color:#000000;
+   border-width:2px;
+   border-style:solid;
+   para poner esto en una sola linea codigo*/
+   border:2px solid #000000;
+   border-radius:10px;
+
+
+}
+
+
+
+.productos li:hover{
+    border-color:#c78c19;
+    
+
+}
+
+.productos li:active{
+    border-color:#088019;
+}
+
+
+.productos h2{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.productos li:hover h2{
+font-size:33px;
+}
+
+.producto-descripción{
+    font-size:18px;
+}
+.producto-precio{
+    font-size:20px;
+    font-weight:bold;
+    /*separa la descripción del precio*/
+    margin-top:10px;
+}
+footer{
+text-align:center;
+background:url(imagenes/bg.png);
+
+padding:40px 0;
+}
+.copyright{
+color:#ffffff;
+font-size:13px;
+margin:20px 0 0;
+/* el c se pone &copy directo en html*/
+}
+/* mantenia todo centrado a 940px pero ahora en cada una de las clases lo iremos aplicando y no general
+main{
+    width:940px;
+    margin:0 auto;
+}*/
+form{
+    margin:40px 40px;
+    
+    
+}
+
+form label, form legend{
+    display:block;
+    font-size:20px;
+    margin: 0 0 10px;
+}
+/*todos los elementos form input y textarea alieados iguales*/
+.input-padron{
+    display:block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width:50%;
+    
+}
+.checkbox{
+    margin:20px 0;
+}
+
+.enviar{
+    width:40%;
+    padding:15px 0;
+    font-weight: bold;
+    color:white;
+    background:orange;
+    border:none;
+    border-radius:5px;
+   /* transition:1s background; solo afecta cambio color de fondo en btn*/
+    transition:1s all; /*lo aplica a toda transicion y transform*/
+   cursor:pointer;/*manita*/
+    
+}
+
+.enviar:hover{
+    background-color:orangered;
+    transform:scale(1.2); /*aumenta elemento al hover*/
+  /*  transform:rotate(1deg);1grados si la habilito btn gira 1 grado pero ya no aumenta color porque 
+  usamos la misma propiedad transform y  utiliza la ultima puesta*/
+  /*para que utilice las dos se ponen juntas
+   transform:scale(1.2) rotate(1deg);*/
+}
+
+table{
+    /*margin 40px 40px;*/
+    margin:20px 40px 40px;
+
+}
+
+thead{
+    background-color:#555555;
+    color:white;
+    font-weight:black;
+}
+/*lineas de la tabla*/
+td,th{
+    border:1px solid #000000;
+    padding:8px 15px;
+}
+/*css para nuestra pagina inicial*/
+
+.banner{
+    width:100%;
+}
+.principal{
+    padding:3em 0;
+    background-color:#fefefe;
+    width:940px;
+    margin:0 auto;
+}
+
+
+.titulo-principal{
+    text-align:center;
+    /*significa 2 veces el tamaño por defecto*/
+    font-size:2em;
+    margin:0 0 1em;
+    clear:left;
+    /*para agregar opacidad al color*/
+    color:rgba(0,0,0,0.3);/*para opacar al negro de los titulos*/
+}
+
+.titulo-principal:first-letter{
+    font-weight:bold;
+}
+/* otro ejemplo de uso es poner primer linea italica
+p:first-line{
+    font-style:italic;
+}*/
+
+/* pondra corchetes antes y despues del titulo para enmarcarlo*/
+.titulo-principal:before{
+   content:"[" ;
+  } 
+  
+ .titulo-principal:after{
+   content:"]" ;
+ }   
+.principal p{
+    margin:0 0 1em;
+    width:940px;
+    margin:0 auto;
+}
+.principal strong{
+    font-weight:bold;
+
+}
+.principal em{
+    font-style:italic;
+}
+
+.utensilios{
+    width:120px;
+    float:left;
+    margin:0 20px 20px 0;
+}
+
+.mapa{
+    padding:3em 0;
+    background:linear-gradient(#FEFEFE,#888888);
+
+}
+/*si quiero degradado en un angulo de 45 grados pondria linear-gradient:45deg orange, blue) va ir de naranja a azul en 45grados*/
+/*si quiero que el naranja ocupe mas espacio que el azul  pongo  linear-gradient:45deg orange 50%, blue)*/
+.mapa p{
+    margin:0 0 2em;
+    text-align:center;
+}
+
+.mapa-contenido{
+    width:940px;
+    margin:0 auto;
+    
+}
+.diferenciales{
+    padding:3em 0;
+    background:#888888;
+}
+
+.contenido-diferenciales{
+    width:640px;
+    margin:0 auto;
+}
+.lista-diferenciales{
+    width:40%;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.items{
+    line-height: 1.5em;
+}
+/*de la clase padre items al primer hijo al de hasta arriba primer elemento pintamelo negro*/
+/*otra forma es indicando el numero del lugar que ocupa ese child*/
+/*.items:nth-child(1){
+ font-weight:bold;
+
+}*/
+/* .items:nth-child(2n){
+    esto estaria pintando los pares.
+ }*/   
+.items:first-child{
+  font-weight:bold;
+}
+
+.items:before{
+    content:"✂";
+}
+.imagen-Diferenciales{
+    width:60%;
+  
+  transition:400ms;/*para demorar el hover*/
+  box-shadow:10px 10px 30px;
+ 
+}
+
+.imagen-Diferenciales:hover{
+    opacity:30%;
+    
+}
+
+.video{
+    /*misma anchura que tiene el video*/
+    width:560px;
+    margin:1em auto;
+}
+
+/*medias queries*/
+
+@media screen and (max-width:480px){
+  h1{
+    text-align:center;  
+  }
+    nav{
+     
+        position:static;
+
+    }
+nav ul li{
+    position:static;
+}
+
+    body, .caja, .productos,.productos li, .foot, .copyright, .principal,.principal p, .contenido-diferenciales, .video{
+        width:auto;
+    }
+}
+
+@media screen and (max-width: 957px) {
+	.caja, .caja li .video, .contenido-diferenciales, .video, .foot{
+		width: auto;
+	}
+
+    .produtos li{
+		width: auto;
+	/*	margin: 20px 20%;*/
+		display: flex;
+    	flex-direction: column;
+        font-size:small;
+	}
+	
+	.principal, .principal p{
+		width:auto;
+		padding: 2em 0.5em;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+	nav{
+		position: static;
+		display: flex;
+		justify-content: center;
+	}
+
+	.lista-beneficios, .imagem-beneficios{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.titulo-principal{
+		font-size: 26px;
+	}
+
+	 p{
+		text-align: center;
+	}
+
+	.video{
+		padding: 1em;
+	}
+
+	form{
+		margin-left: 20px;
+	}
+
+	fieldset{
+		padding-bottom: 1em;
+	}
+
+	select{
+		width:30%;
+		text-indent: 20px;
+	}
+
+	.enviar{
+		width: 50%;
+	}
+
+	table{
+		margin-left: 20px;
+	}
+
+    .productos p , .productos img,.productos h2 {
+        width:120%;
+    }
+
+    .productos li h2{
+        font-size:20px;
+    }
+    
+}
+    
